@@ -715,6 +715,50 @@
   /* decorative SVG illustrations */
   .illust { display: block; margin: 0 auto; opacity: 0.8; }
 
+  /* ============ BIBLIOGRAPHY ============ */
+  .bibliography {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 44px;
+    margin-top: 30px;
+    border-top: 1px solid var(--line);
+  }
+  @media (max-width: 820px) { .bibliography { grid-template-columns: 1fr; gap: 0; } }
+  .bib-item {
+    padding: 14px 0;
+    font-size: 15px;
+    line-height: 1.5;
+    display: flex;
+    gap: 14px;
+    border-bottom: 1px dashed var(--line);
+    color: var(--ink-soft);
+  }
+  .bib-item .num {
+    font-family: "Old Standard TT", serif;
+    font-weight: 700;
+    color: var(--voucher-red);
+    font-size: 17px;
+    min-width: 26px;
+    flex-shrink: 0;
+  }
+  .bib-item .text { font-family: "PT Serif", serif; }
+  .bib-item .text em { font-style: italic; color: var(--ink); }
+  .bib-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 8px;
+    font-family: "PT Sans Narrow", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    font-size: 12px;
+    color: var(--voucher-green-dark);
+    font-weight: 700;
+  }
+  .bib-header::before, .bib-header::after {
+    content: ""; flex: 1; height: 1px; background: var(--ink); opacity: 0.3;
+  }
+
   @media (max-width: 720px) {
     body { font-size: 16px; }
     .wrap { padding: 0 20px; }
@@ -1301,6 +1345,41 @@
       <div class="stat" style="background: var(--paper); color: var(--ink);"><div class="value count" data-target="75" data-suffix="%">0</div><div class="label">частного сектора<br/>в ВВП к 1999</div></div>
       <div class="stat" style="background: var(--paper); color: var(--ink);"><div class="value count" data-target="-21" data-suffix="%">0</div><div class="label">падение пром.<br/>производства<br/>за 1994</div></div>
       <div class="stat" style="background: var(--paper); color: var(--ink);"><div class="value count" data-target="1.5" data-suffix=" трлн $" data-decimals="1">0</div><div class="label">потерь<br/>потенциального<br/>ВВП</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ X. ИСТОЧНИКИ ============ -->
+<section>
+  <div class="wrap">
+    <div class="section-num">X. — источники</div>
+    <h2>Список литературы</h2>
+    <p class="section-lead">Нормативные акты, мемуары участников и работы исследователей, на которые опирается этот проект.</p>
+
+    <div class="bib-header">Нормативно-правовые акты</div>
+    <div class="bibliography">
+      <div class="bib-item"><span class="num">1.</span><span class="text">Закон РСФСР от 03.07.1991 № 1531-1 «О приватизации государственных и муниципальных предприятий в РСФСР» // Ведомости СНД и ВС РСФСР. 1991. № 27. Ст. 927.</span></div>
+      <div class="bib-item"><span class="num">2.</span><span class="text">Закон РСФСР от 04.07.1991 № 1541-1 «О приватизации жилищного фонда в РСФСР» // Ведомости СНД и ВС РСФСР. 1991. № 28. Ст. 959.</span></div>
+      <div class="bib-item"><span class="num">3.</span><span class="text">Указ Президента РФ от 01.07.1992 № 721 «О мерах по реализации промышленной политики при приватизации государственных предприятий» // САПП РФ. 1992. № 1. Ст. 3.</span></div>
+      <div class="bib-item"><span class="num">4.</span><span class="text">Указ Президента РФ от 14.08.1992 № 914 «О введении в действие системы приватизационных чеков».</span></div>
+      <div class="bib-item"><span class="num">5.</span><span class="text">Указ Президента РФ от 31.08.1995 № 889 «О порядке передачи в залог акций, находящихся в федеральной собственности».</span></div>
+      <div class="bib-item"><span class="num">6.</span><span class="text">Постановление Верховного Совета РФ от 11.06.1992 № 2980-I «О введении в действие Государственной программы приватизации государственных и муниципальных предприятий в РФ на 1992 год» // Ведомости СНД и ВС РФ. 1992. № 28. Ст. 1657.</span></div>
+    </div>
+
+    <div class="bib-header" style="margin-top: 40px;">Мемуары и работы участников</div>
+    <div class="bibliography">
+      <div class="bib-item"><span class="num">7.</span><span class="text"><em>Гайдар Е. Т.</em> Дни поражений и побед. М.: Вагриус, 1996. 365 с.</span></div>
+      <div class="bib-item"><span class="num">8.</span><span class="text">Приватизация по-российски / под ред. А. Б. Чубайса. М.: Вагриус, 1999. 366 с.</span></div>
+      <div class="bib-item"><span class="num">9.</span><span class="text"><em>Явлинский Г. А., Шаталин С. С.</em> 500 дней. Программа перехода к рынку. М.: Медиум, 1990. 239 с.</span></div>
+      <div class="bib-item"><span class="num">10.</span><span class="text"><em>Найшуль В. А.</em> Интервью // Коммерсантъ Деньги. 2002. № 47. С. 22–24.</span></div>
+    </div>
+
+    <div class="bib-header" style="margin-top: 40px;">Литература и статистика</div>
+    <div class="bibliography">
+      <div class="bib-item"><span class="num">11.</span><span class="text"><em>Бессолицын А. А.</em> Экономические реформы 1990-х годов: уроки и противоречия // Экономическая история. 2022. № 3. С. 12–18.</span></div>
+      <div class="bib-item"><span class="num">12.</span><span class="text"><em>Солянникова С. П.</em> Итоги приватизации в России: 30 лет спустя // Финансы и кредит. 2022. № 11. С. 45–52.</span></div>
+      <div class="bib-item"><span class="num">13.</span><span class="text"><em>Ханин Г. И.</em> Экономическая история России в новейшее время. Российская экономика в 1992–1998 годы. Новосибирск: НГТУ, 2010. 437 с.</span></div>
+      <div class="bib-item"><span class="num">14.</span><span class="text">Российский статистический ежегодник. М.: Госкомстат России, 1994, 1995, 1999, 2000.</span></div>
     </div>
   </div>
 </section>
